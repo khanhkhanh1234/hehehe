@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <script>  
+        function hello(){  
+            var text1 = document.f1.t1.value.length;
+          var a= document.f1.t1.value;
+            ch = a.split("")
+            th = a.split("")
+           
+            for(let i = 0; i < text1; i++ )
+            {
+                th[i]= ch[i].charCodeAt();
+            }
+           
+            for(let i = 0; i < text1; i++ )
+            {
+                if(th[i]>=65&&th[i]<=90) 
+                {
+                th[i]=th[i]+32;
+               
+                }
+                else 
+                {  th[i]=th[i]-32;
+                th[i] ;}
+          }
+          
+          
+          for(let i = 0; i < text1; i++ )
+          {
+            ch[i]= String.fromCharCode(th[i])
+          }
+          document.f1.t2.value= ch.join("");
+        }  
+      </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1" action="" method="post/get" >
+        <input type="text" name ="t1" value="" onblur="hello()" >
+        <input type="text" name ="t2" value=""  >
+       
+</body>
+</html>
